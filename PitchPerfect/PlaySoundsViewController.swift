@@ -12,6 +12,8 @@ import AVFoundation
 class PlaySoundsViewController: UIViewController {
     
     var audio: AVAudioPlayer!
+    var receivedAudio: RecordedAudio!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -43,13 +45,8 @@ class PlaySoundsViewController: UIViewController {
     }
     
     func playSound() {
-        if var filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
-            let url = NSURL.fileURLWithPath(filePath)
-            audio = AVAudioPlayer(contentsOfURL: url, error: nil)
-            audio.enableRate = true
-        } else {
-            println("the filePath is empty")
-        }
+        audio = AVAudioPlayer(contentsOfURL: receivedAudio.filePathURL, error: nil)
+        audio.enableRate = true
     }
     
     func loadSound() {
@@ -61,14 +58,4 @@ class PlaySoundsViewController: UIViewController {
             println("the filePath is empty")
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

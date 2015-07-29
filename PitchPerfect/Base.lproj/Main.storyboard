@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YsO-X0-i5r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YsO-X0-i5r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -30,7 +31,6 @@
                                 </state>
                                 <connections>
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1mQ-eU-zfo"/>
-                                    <segue destination="E1I-cz-MdR" kind="show" id="ZkV-AE-ncy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iT-ML-dZe">
@@ -73,13 +73,13 @@
                                 <exclude reference="6iT-ML-dZe"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="r8K-HM-7qG"/>
+                                <exclude reference="2xd-gu-co5"/>
                                 <exclude reference="cTa-N3-pEQ"/>
                                 <exclude reference="etp-Vf-L16"/>
                                 <exclude reference="jEm-HD-hbk"/>
-                                <exclude reference="2xd-gu-co5"/>
                                 <exclude reference="8gL-Wl-xD4"/>
                                 <exclude reference="zNf-pH-xtL"/>
-                                <exclude reference="r8K-HM-7qG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -89,13 +89,13 @@
                                 <include reference="6iT-ML-dZe"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="r8K-HM-7qG"/>
+                                <include reference="2xd-gu-co5"/>
                                 <include reference="cTa-N3-pEQ"/>
                                 <include reference="etp-Vf-L16"/>
                                 <include reference="jEm-HD-hbk"/>
-                                <include reference="2xd-gu-co5"/>
                                 <include reference="8gL-Wl-xD4"/>
                                 <include reference="zNf-pH-xtL"/>
-                                <include reference="r8K-HM-7qG"/>
                             </mask>
                         </variation>
                     </view>
@@ -104,6 +104,7 @@
                         <outlet property="recordingLabel" destination="4j0-VE-ice" id="rCq-2v-yds"/>
                         <outlet property="recordingOutlet" destination="6iT-ML-dZe" id="Dfn-dj-FKI"/>
                         <outlet property="stopRecordingOutlet" destination="rp6-zl-Lcz" id="NNm-wT-cfU"/>
+                        <segue destination="E1I-cz-MdR" kind="show" identifier="stopRecording" id="S8b-R9-xIC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -167,13 +168,13 @@
                                 <exclude reference="2Eb-21-dYM"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="PH4-3k-CUB"/>
-                                <exclude reference="mq6-N6-Vqp"/>
+                                <exclude reference="sqo-6s-cfM"/>
                                 <exclude reference="GX4-kO-DiQ"/>
                                 <exclude reference="RxL-M3-tZF"/>
                                 <exclude reference="7de-0n-q84"/>
                                 <exclude reference="iux-Sb-RKe"/>
-                                <exclude reference="sqo-6s-cfM"/>
+                                <exclude reference="PH4-3k-CUB"/>
+                                <exclude reference="mq6-N6-Vqp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -183,13 +184,13 @@
                                 <include reference="2Eb-21-dYM"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="PH4-3k-CUB"/>
-                                <include reference="mq6-N6-Vqp"/>
+                                <include reference="sqo-6s-cfM"/>
                                 <include reference="GX4-kO-DiQ"/>
                                 <include reference="RxL-M3-tZF"/>
                                 <include reference="7de-0n-q84"/>
                                 <include reference="iux-Sb-RKe"/>
-                                <include reference="sqo-6s-cfM"/>
+                                <include reference="PH4-3k-CUB"/>
+                                <include reference="mq6-N6-Vqp"/>
                             </mask>
                         </variation>
                     </view>
