@@ -39,10 +39,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         self.recordingOutlet.enabled = false
         //TODO: Record the user's voice
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
-//        //TODO: delete next 3 lines
-//        let currentDateTime = NSDate()
-//        let formatter = NSDateFormatter()
-//        formatter.dateFormat = "ddMMyyyy-HHmmss"
+
         let recordingName = "pitch_perfect.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)

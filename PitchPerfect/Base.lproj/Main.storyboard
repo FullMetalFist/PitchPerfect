@@ -153,7 +153,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3un-NX-wVr">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="107" id="FZR-ht-rnc"/>
+                                    <constraint firstAttribute="height" constant="107" id="FZR-ht-rnc">
+                                        <variation key="widthClass=compact" constant="100"/>
+                                    </constraint>
                                     <constraint firstAttribute="width" constant="100" id="w40-9z-Ibw"/>
                                 </constraints>
                                 <state key="normal" image="chipmunk">
@@ -175,15 +177,28 @@
                                     <action selector="chipmunk:" destination="E1I-cz-MdR" eventType="touchUpInside" id="gVw-Ju-V61"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxf-Jt-pcW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="vader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="vader:" destination="E1I-cz-MdR" eventType="touchUpInside" id="uW0-bm-g0J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jxf-Jt-pcW" firstAttribute="bottom" secondItem="3un-NX-wVr" secondAttribute="bottom" id="5P5-aS-UMk"/>
+                            <constraint firstItem="jxf-Jt-pcW" firstAttribute="top" secondItem="3un-NX-wVr" secondAttribute="top" id="7FI-km-50m"/>
                             <constraint firstAttribute="centerY" secondItem="PhG-LQ-Bkf" secondAttribute="centerY" constant="-218" id="7de-0n-q84"/>
                             <constraint firstItem="3un-NX-wVr" firstAttribute="leading" secondItem="Uha-7l-TSr" secondAttribute="leading" id="E6V-mp-kPO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Eb-21-dYM" secondAttribute="trailing" constant="40" id="GX4-kO-DiQ"/>
                             <constraint firstItem="Uha-7l-TSr" firstAttribute="leading" secondItem="8Nr-xe-sc2" secondAttribute="leadingMargin" constant="41" id="PH4-3k-CUB"/>
                             <constraint firstItem="3un-NX-wVr" firstAttribute="top" secondItem="Uha-7l-TSr" secondAttribute="bottom" constant="89" id="Q8e-cM-k2f"/>
                             <constraint firstItem="2Eb-21-dYM" firstAttribute="top" secondItem="mUJ-3z-JsP" secondAttribute="bottom" constant="54" id="RxL-M3-tZF"/>
+                            <constraint firstItem="jxf-Jt-pcW" firstAttribute="leading" secondItem="3un-NX-wVr" secondAttribute="trailing" constant="87" id="bnf-eX-5rf"/>
+                            <constraint firstItem="jxf-Jt-pcW" firstAttribute="trailing" secondItem="2Eb-21-dYM" secondAttribute="trailing" id="eGc-YP-Vb8"/>
                             <constraint firstItem="PhG-LQ-Bkf" firstAttribute="centerX" secondItem="8Nr-xe-sc2" secondAttribute="centerX" id="iux-Sb-RKe"/>
                             <constraint firstItem="Uha-7l-TSr" firstAttribute="top" secondItem="mUJ-3z-JsP" secondAttribute="bottom" constant="54" id="mq6-N6-Vqp"/>
                             <constraint firstItem="m5c-IN-b7W" firstAttribute="top" secondItem="PhG-LQ-Bkf" secondAttribute="bottom" constant="57" id="sqo-6s-cfM"/>
@@ -194,6 +209,7 @@
                                 <exclude reference="Uha-7l-TSr"/>
                                 <exclude reference="2Eb-21-dYM"/>
                                 <exclude reference="3un-NX-wVr"/>
+                                <exclude reference="jxf-Jt-pcW"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="PH4-3k-CUB"/>
@@ -202,6 +218,10 @@
                                 <exclude reference="RxL-M3-tZF"/>
                                 <exclude reference="E6V-mp-kPO"/>
                                 <exclude reference="Q8e-cM-k2f"/>
+                                <exclude reference="5P5-aS-UMk"/>
+                                <exclude reference="7FI-km-50m"/>
+                                <exclude reference="bnf-eX-5rf"/>
+                                <exclude reference="eGc-YP-Vb8"/>
                                 <exclude reference="7de-0n-q84"/>
                                 <exclude reference="iux-Sb-RKe"/>
                                 <exclude reference="sqo-6s-cfM"/>
@@ -213,6 +233,7 @@
                                 <include reference="Uha-7l-TSr"/>
                                 <include reference="2Eb-21-dYM"/>
                                 <include reference="3un-NX-wVr"/>
+                                <include reference="jxf-Jt-pcW"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="PH4-3k-CUB"/>
@@ -221,6 +242,10 @@
                                 <include reference="RxL-M3-tZF"/>
                                 <include reference="E6V-mp-kPO"/>
                                 <include reference="Q8e-cM-k2f"/>
+                                <include reference="5P5-aS-UMk"/>
+                                <include reference="7FI-km-50m"/>
+                                <include reference="bnf-eX-5rf"/>
+                                <include reference="eGc-YP-Vb8"/>
                                 <include reference="7de-0n-q84"/>
                                 <include reference="iux-Sb-RKe"/>
                                 <include reference="sqo-6s-cfM"/>
@@ -257,5 +282,6 @@
         <image name="rabbit" width="100" height="100"/>
         <image name="snail" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
+        <image name="vader" width="200" height="200"/>
     </resources>
 </document>
